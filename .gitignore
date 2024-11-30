@@ -1,2 +1,15 @@
-# *.iss
+# Ignore executable files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore compiled binaries
+*.com
+*.class
+*.o
+*.out
+
+# Ignore Inno Setup Script files
+*.iss
 promos/
