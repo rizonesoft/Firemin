@@ -3,8 +3,8 @@ FIREMIN
 © RIZONESOFT. All rights reserved
 https://www.rizonesoft.com
 ==================================================
-Version: 11.8.3.8509
-Release Date: 20 NOVEMBER, 2024
+Version: 11.8.3.8516
+Release Date: 30 NOVEMBER, 2024
 System Requirements: 7, 8, 8.1, 10, 11
 Disk Space: 0 MB
 ==================================================
@@ -19,4 +19,4 @@ We like keeping our apps running for a few days (that's just the way we roll) an
 Rather than complaining about it, we decided to fix it. Enter Firemin; simply put, it will eliminate all memory leaks in Firefox. All we did was tweaked our memory optimization engine a little and applied it to Firefox (including Firefox extensions) and all the memory leaks was gone. To use Firemin; you will need to unzip Firemin.zip, double click on Firemin.exe and let Firemin babysit Firefox. You expected it to be more complicated, we are truly sorry to disappoint you.
 
 ==================================================
-https://www.rizonesoft.com
+https://rizonesoft.com

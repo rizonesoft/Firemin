@@ -31,7 +31,7 @@
 ;===============================================================================================================
 #AutoIt3Wrapper_Res_Comment=Firemin									;~ Comment field
 #AutoIt3Wrapper_Res_Description=Firemin						      	;~ Description field
-#AutoIt3Wrapper_Res_Fileversion=11.8.3.8509
+#AutoIt3Wrapper_Res_Fileversion=11.8.3.8516
 #AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
 #AutoIt3Wrapper_Res_FileVersion_First_Increment=Y					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
 #AutoIt3Wrapper_Res_HiDpi=N                      					;~ (Y/N) Compile for high DPI. Default=N
@@ -95,70 +95,62 @@
 #AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\PayPalH.ico						; 217
 #AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\sa.ico							; 218
 #AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\saH.ico							; 219
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\Twitter.ico						; 220
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\TwitterH.ico						; 221
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\Facebook.ico						; 222
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\FacebookH.ico					; 223
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\Reddit.ico						; 224
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\RedditH.ico						; 225
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\LinkedIn.ico						; 226
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\LinkedInH.ico					; 227
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\GitHub.ico						; 228
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\GitHubH.ico	 					; 229
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\WhatsApp.ico						; 230
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\WhatsAppH.ico	 				; 231
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\Facebook.ico						; 220
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\FacebookH.ico					; 221
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\GitHub.ico						; 222
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\About\GitHubH.ico	 					; 223
 
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\en.ico							; 232
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\af.ico							; 233
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ar.ico							; 234
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\bg.ico							; 235
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\cs.ico							; 236
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\da.ico							; 237
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\de.ico							; 238
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\el.ico							; 239
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\es.ico							; 240
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\fr.ico							; 241
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\hi.ico							; 242
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\hr.ico							; 243
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\hu.ico							; 244
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\id.ico							; 245
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ir.ico							; 246
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\is.ico							; 247
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\it.ico							; 248
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\iw.ico							; 249
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ja.ico							; 250
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ko.ico							; 251
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\nl.ico							; 252
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\no.ico							; 253
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\pl.ico							; 254
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\pt.ico							; 255
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\pt-BR.ico						; 256
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ro.ico							; 257
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ru.ico							; 258
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\sl.ico							; 259
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\sk.ico							; 260
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\sv.ico							; 261
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\th.ico							; 262
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\tr.ico							; 263
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\vi.ico							; 264
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\zh-CN.ico						; 265
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\zh-TW.ico						; 266
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\en.ico							; 224
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\af.ico							; 225
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ar.ico							; 226
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\bg.ico							; 227
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\cs.ico							; 228
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\da.ico							; 229
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\de.ico							; 230
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\el.ico							; 231
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\es.ico							; 232
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\fr.ico							; 233
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\hi.ico							; 234
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\hr.ico							; 235
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\hu.ico							; 236
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\id.ico							; 237
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ir.ico							; 238
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\is.ico							; 239
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\it.ico							; 240
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\iw.ico							; 241
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ja.ico							; 242
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ko.ico							; 243
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\nl.ico							; 244
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\no.ico							; 245
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\pl.ico							; 246
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\pt.ico							; 247
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\pt-BR.ico						; 248
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ro.ico							; 249
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\ru.ico							; 250
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\sl.ico							; 251
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\sk.ico							; 252
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\sv.ico							; 253
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\th.ico							; 254
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\tr.ico							; 255
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\vi.ico							; 256
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\zh-CN.ico						; 257
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Flags\zh-TW.ico						; 258
 
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-0.ico						; 267
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-1.ico						; 268
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-2.ico						; 269
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-3.ico						; 270
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-4.ico						; 271
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-5.ico						; 272
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-0.ico						; 259
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-1.ico						; 260
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-2.ico						; 261
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-3.ico						; 262
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-4.ico						; 263
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Power\Power-5.ico						; 264
 
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Gear.ico							; 273
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Logbook.ico						; 274
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Close.ico						; 275
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Update.ico						; 276
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Home.ico							; 277
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Support.ico						; 278
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\GitHub.ico						; 279
-#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\About.ico						; 280
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Gear.ico							; 265
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Logbook.ico						; 266
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Close.ico						; 267
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Update.ico						; 268
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Home.ico							; 269
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\Support.ico						; 270
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\GitHub.ico						; 271
+#AutoIt3Wrapper_Res_Icon_Add=Resources\Icons\Menus\About.ico						; 272
 
 ;===============================================================================================================
 ; Tidy Settings
@@ -280,21 +272,16 @@ Global $g_iSingleton			= True
 Global $g_iCoreGuiLoaded		= False
 
 ;~ Links
-Global $g_sUrlCompHomePage		= "https://www.rizonesoft.com|www.rizonesoft.com"														; https://www.rizonesoft.com
-Global $g_sUrlSupport			= "https://www.rizonesoft.com/contact-us/|www.rizonesoft.com/contact-us"								; https://www.rizonesoft.com/contact-us
-Global $g_sUrlWhatsApp			= "https://api.whatsapp.com/send?phone=27849630169&text=Hi,&source=&data="
-Global $g_sUrlDownloads			= "https://www.rizonesoft.com/downloads/|/www.rizonesoft.com/downloads/"								; https://www.rizonesoft.com/downloads/
-Global $g_sUrlTwitter			= "https://twitter.com/rizonesoft|Twitter.com/Rizonesoft"												; https://twitter.com/Rizonesoft
-Global $g_sUrlFacebook			= "https://www.facebook.com/rizonesoft|Facebook.com/rizonesoft"											; https://www.facebook.com/rizonesoft
-Global $g_sUrlReddit			= "https://www.reddit.com/user/rizonesoft|Reddit.com/user/rizonesoft"									; https://www.reddit.com/user/rizonesoft
-Global $g_sUrlLinkedIn	 		= "https://www.linkedin.com/in/rizonetech|LinkedIn.com/in/rizonetech" 									; https://www.linkedin.com/in/rizonetech
-Global $g_sUrlGitHub			= "https://github.com/rizonesoft/Resolute|GitHub.com/rizonesoft/Resolute"								; https://github.com/rizonesoft/Resolute
-Global $g_sUrlGitHubIssues		= "https://github.com/rizonesoft/Resolute/issues|GitHub.com/rizonesoft/Resolute/issues"					; https://github.com/rizonesoft/Resolute/issues
-Global $g_sUrlRSS				= "https://www.rizonesoft.com/feed|www.rizonesoft.com/feed"												; https://www.rizonesoft.com/feed
-Global $g_sUrlPayPal			= "https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE|PayPal.com/donate"						; https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE
-Global $g_sUrlSA				= "https://en.wikipedia.org/wiki/South_Africa|Wikipedia.org/wiki/South_Africa"							; https://en.wikipedia.org/wiki/South_Africa
-Global $g_sUrlProgPage			= "https://www.rizonesoft.com/downloads/firemin/|www.rizonesoft.com/downloads/firemin/"
-Global $g_sUrlUpdate			= "https://www.rizonesoft.com/downloads/resolute/update/"
+Global $g_sUrlCompHomePage		= "https://rizonesoft.com|rizonesoft.com"														; https://rizonesoft.com
+Global $g_sUrlSupport			= "https://rizonesoft.com/contact-us/|rizonesoft.com/contact-us"								; https://rizonesoft.com/contact-us
+Global $g_sUrlDownloads			= "https://rizonesoft.com/downloads/|rizonesoft.com/downloads/"									; https://rizonesoft.com/downloads/
+Global $g_sUrlFacebook			= "https://www.facebook.com/rizonesoft|Facebook.com/rizonesoft"									; https://www.facebook.com/rizonesoft
+Global $g_sUrlGitHub			= "https://github.com/rizonesoft/Firemin|GitHub.com/rizonesoft/Firemin"							; https://github.com/rizonesoft/Resolute
+Global $g_sUrlGitHubIssues		= "https://github.com/rizonesoft/Firemin/issues|GitHub.com/rizonesoft/Firemin/issues"			; https://github.com/rizonesoft/Resolute/issues
+Global $g_sUrlPayPal			= "https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE|PayPal.com/donate"				; https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE
+Global $g_sUrlSA				= "https://en.wikipedia.org/wiki/South_Africa|Wikipedia.org/wiki/South_Africa"					; https://en.wikipedia.org/wiki/South_Africa
+Global $g_sUrlProgPage			= "https://rizonesoft.com/downloads/firemin/|rizonesoft.com/downloads/firemin/"
+Global $g_sUrlUpdate			= "https://rizonesoft.com/downloads/firemin/"
 Global $g_sUrlUpdateServer		= "https://cdn2.rizonesoft.com/update/"
 
 ;~ Path Variables
@@ -329,8 +316,11 @@ Global $g_iExtProcsEnabled	 = 1
 Global $g_iShowNotifications = 0
 
 If Not @Compiled Then
-	$g_sProcessDir = _PathFull(@ScriptDir & "\..\..\..\Resolute\Processing")
+	$g_sProcessDir = _PathFull(@ScriptDir & "..\Processing")
 EndIf
+
+;~ Working Directories needs to be set before language is loaded.
+_SetWorkingDirectories()
 
 ;~ Language Settings
 Global $g_sLanguageDir		= $g_sRootDir & "\Language"
@@ -342,9 +332,9 @@ Global $g_sLanguageFile		= $g_sLanguageDir & "\" & $g_sSelectedLanguage & ".ini"
 Global $g_iUpdateIconStart				= 209
 Global $g_iDialogIconStart				= 211
 Global $g_iAboutIconStart				= 216
-Global $g_iLangIconStart				= 232
-Global $g_iPowerIconsStart				= 267
-Global $g_iMenuIconsStart				= 273
+Global $g_iLangIconStart				= 224
+Global $g_iPowerIconsStart				= 259
+Global $g_iMenuIconsStart				= 265
 
 Global $g_aCoreIcons[3]
 Global $g_iSizeIcon						= 64

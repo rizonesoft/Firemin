@@ -31,7 +31,7 @@
 ;===============================================================================================================
 #AutoIt3Wrapper_Res_Comment=Watermin									;~ Comment field
 #AutoIt3Wrapper_Res_Description=Watermin						      	;~ Description field
-#AutoIt3Wrapper_Res_Fileversion=11.8.3.8521
+#AutoIt3Wrapper_Res_Fileversion=11.8.3.8525
 #AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
 #AutoIt3Wrapper_Res_FileVersion_First_Increment=Y					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
 #AutoIt3Wrapper_Res_HiDpi=N                      					;~ (Y/N) Compile for high DPI. Default=N
@@ -272,16 +272,16 @@ Global $g_iSingleton			= True
 Global $g_iCoreGuiLoaded		= False
 
 ;~ Links
-Global $g_sUrlCompHomePage		= "https://rizonesoft.com|rizonesoft.com"														; https://www.rizonesoft.com
-Global $g_sUrlSupport			= "https://rizonesoft.com/contact-us/|rizonesoft.com/contact-us"								; https://www.rizonesoft.com/contact-us
-Global $g_sUrlDownloads			= "https://www.rizonesoft.com/downloads/|/www.rizonesoft.com/downloads/"								; https://www.rizonesoft.com/downloads/
-Global $g_sUrlFacebook			= "https://www.facebook.com/rizonesoft|Facebook.com/rizonesoft"											; https://www.facebook.com/rizonesoft
-Global $g_sUrlGitHub			= "https://github.com/rizonesoft/Resolute|GitHub.com/rizonesoft/Resolute"								; https://github.com/rizonesoft/Resolute
-Global $g_sUrlGitHubIssues		= "https://github.com/rizonesoft/Resolute/issues|GitHub.com/rizonesoft/Resolute/issues"					; https://github.com/rizonesoft/Resolute/issues
-Global $g_sUrlPayPal			= "https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE|PayPal.com/donate"						; https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE
-Global $g_sUrlSA				= "https://en.wikipedia.org/wiki/South_Africa|Wikipedia.org/wiki/South_Africa"							; https://en.wikipedia.org/wiki/South_Africa
-Global $g_sUrlProgPage			= "https://www.rizonesoft.com/downloads/firemin/|www.rizonesoft.com/downloads/firemin/"
-Global $g_sUrlUpdate			= "https://www.rizonesoft.com/downloads/resolute/update/"
+Global $g_sUrlCompHomePage		= "https://rizonesoft.com|rizonesoft.com"														; https://rizonesoft.com
+Global $g_sUrlSupport			= "https://rizonesoft.com/contact-us/|rizonesoft.com/contact-us"								; https://rizonesoft.com/contact-us
+Global $g_sUrlDownloads			= "https://rizonesoft.com/downloads/|rizonesoft.com/downloads/"									; https://rizonesoft.com/downloads/
+Global $g_sUrlFacebook			= "https://www.facebook.com/rizonesoft|Facebook.com/rizonesoft"									; https://www.facebook.com/rizonesoft
+Global $g_sUrlGitHub			= "https://github.com/rizonesoft/Firemin|GitHub.com/rizonesoft/Firemin"							; https://github.com/rizonesoft/Firemin
+Global $g_sUrlGitHubIssues		= "https://github.com/rizonesoft/Firemin/issues|GitHub.com/rizonesoft/Firemin/issues"			; https://github.com/rizonesoft/Firemin/issues
+Global $g_sUrlPayPal			= "https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE|PayPal.com/donate"				; https://www.paypal.com/donate/?hosted_button_id=7UGGCSDUZJPFE
+Global $g_sUrlSA				= "https://en.wikipedia.org/wiki/South_Africa|Wikipedia.org/wiki/South_Africa"					; https://en.wikipedia.org/wiki/South_Africa
+Global $g_sUrlProgPage			= "https://rizonesoft.com/downloads/firemin/|rizonesoft.com/downloads/firemin/"
+Global $g_sUrlUpdate			= "https://rizonesoft.com/downloads/firemin/"
 Global $g_sUrlUpdateServer		= "https://cdn2.rizonesoft.com/update/"
 
 ;~ Path Variables
@@ -303,7 +303,7 @@ Global $g_sDocReadme		= $g_sDocsDir & "\Readme.txt"
 Global $g_iBoostMill		 = 1000
 Global $g_iCleanLimit		 = 200
 Global $g_sBrowserName
-Global $g_sBrowserPath		 = @ProgramFilesDir & "\Mozilla Firefox\firefox.exe"
+Global $g_sBrowserPath		 = @ProgramFilesDir & "\Waterfox\waterfox.exe"
 Global $g_sExtendedProcs	 = "plugin-container.exe"
 Global $g_sCoreProcess
 Global $g_iCoreProcessUsage	 = 0
@@ -316,8 +316,11 @@ Global $g_iExtProcsEnabled	 = 1
 Global $g_iShowNotifications = 0
 
 If Not @Compiled Then
-	$g_sProcessDir = _PathFull(@ScriptDir & "\..\..\..\Resolute\Processing")
+	$g_sProcessDir = _PathFull(@ScriptDir & "..\Processing")
 EndIf
+
+;~ Working Directories needs to be set before language is loaded.
+_SetWorkingDirectories()
 
 ;~ Language Settings
 Global $g_sLanguageDir		= $g_sRootDir & "\Language"
@@ -639,7 +642,7 @@ Func _StartCoreGui()
 	$g_IconProfile = GUICtrlCreateIcon($g_aCoreIcons[0], 99, 20, 120, 48, 48)
 	$g_hIconProfile = GUICtrlGetHandle($g_IconProfile)
 	$g_hLblPrflTitle = GUICtrlCreateLabel(FileGetVersion($g_sBrowserPath, $FV_PRODUCTNAME) & " " & _
-		FileGetVersion($g_sBrowserPath), 78, 125, 350, 20)
+	FileGetVersion($g_sBrowserPath), 78, 125, 350, 20)
 	GUICtrlSetFont($g_hLblPrflTitle, 10)
 	$g_hLblPrflPublisher = GUICtrlCreateLabel(FileGetVersion($g_sBrowserPath, $FV_COMPANYNAME), 78, 145, 350, 15)
 	GUICtrlSetColor($g_hLblPrflPublisher, 0x555555)
@@ -815,63 +818,63 @@ Func _SetResources()
 
 	Else
 
-		$g_aCoreIcons[0] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\" & $g_sProgShortName & ".ico"
+		$g_aCoreIcons[0] = $g_sThemesDir & "Resources\Icons\" & $g_sProgShortName & ".ico"
 		$g_aCoreIcons[1] = $g_sThemesDir & "\Icons\" & $g_sProgShortName & "H.ico"
 
-		$g_aLognIcons[0] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\logging\Information.ico"
-		$g_aLognIcons[1] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\logging\Complete.ico"
-		$g_aLognIcons[2] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\logging\Cross.ico"
-		$g_aLognIcons[3] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\logging\Exclamation.ico"
-		$g_aLognIcons[4] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\logging\Smiley-Glass.ico"
-		$g_aLognIcons[5] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\logging\Skull.ico"
-		$g_aLognIcons[6] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\logging\Snowman.ico"
+		$g_aLognIcons[0] = $g_sThemesDir & "Resources\Icons\logging\Information.ico"
+		$g_aLognIcons[1] = $g_sThemesDir & "Resources\Icons\logging\Complete.ico"
+		$g_aLognIcons[2] = $g_sThemesDir & "Resources\Icons\logging\Cross.ico"
+		$g_aLognIcons[3] = $g_sThemesDir & "Resources\Icons\logging\Exclamation.ico"
+		$g_aLognIcons[4] = $g_sThemesDir & "Resources\Icons\logging\Smiley-Glass.ico"
+		$g_aLognIcons[5] = $g_sThemesDir & "Resources\Icons\logging\Skull.ico"
+		$g_aLognIcons[6] = $g_sThemesDir & "Resources\Icons\logging\Snowman.ico"
 
-		$g_aLanguageIcons[0]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\en.ico"
-		$g_aLanguageIcons[1]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\af.ico"
-		$g_aLanguageIcons[2]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\ar.ico"
-		$g_aLanguageIcons[3]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\bg.ico"
-		$g_aLanguageIcons[4]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\cs.ico"
-		$g_aLanguageIcons[5]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\da.ico"
-		$g_aLanguageIcons[6]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\de.ico"
-		$g_aLanguageIcons[7]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\el.ico"
-		$g_aLanguageIcons[8]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\es.ico"
-		$g_aLanguageIcons[9]  = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\fr.ico"
-		$g_aLanguageIcons[10] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\hi.ico"
-		$g_aLanguageIcons[11] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\hr.ico"
-		$g_aLanguageIcons[12] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\hu.ico"
-		$g_aLanguageIcons[13] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\id.ico"
-		$g_aLanguageIcons[14] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\ir.ico"
-		$g_aLanguageIcons[15] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\is.ico"
-		$g_aLanguageIcons[16] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\it.ico"
-		$g_aLanguageIcons[17] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\iw.ico"
-		$g_aLanguageIcons[18] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\ja.ico"
-		$g_aLanguageIcons[19] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\ko.ico"
-		$g_aLanguageIcons[20] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\nl.ico"
-		$g_aLanguageIcons[21] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\no.ico"
-		$g_aLanguageIcons[22] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\pl.ico"
-		$g_aLanguageIcons[23] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\pt.ico"
-		$g_aLanguageIcons[24] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\pt-BR.ico"
-		$g_aLanguageIcons[25] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\ro.ico"
-		$g_aLanguageIcons[26] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\ru.ico"
-		$g_aLanguageIcons[27] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\sl.ico"
-		$g_aLanguageIcons[28] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\sk.ico"
-		$g_aLanguageIcons[29] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\sv.ico"
-		$g_aLanguageIcons[30] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\th.ico"
-		$g_aLanguageIcons[31] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\tr.ico"
-		$g_aLanguageIcons[32] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\vi.ico"
-		$g_aLanguageIcons[33] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\zh-CN.ico"
-		$g_aLanguageIcons[34] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Flags\zh-TW.ico"
+		$g_aLanguageIcons[0]  = $g_sThemesDir & "Resources\Icons\Flags\en.ico"
+		$g_aLanguageIcons[1]  = $g_sThemesDir & "Resources\Icons\Flags\af.ico"
+		$g_aLanguageIcons[2]  = $g_sThemesDir & "Resources\Icons\Flags\ar.ico"
+		$g_aLanguageIcons[3]  = $g_sThemesDir & "Resources\Icons\Flags\bg.ico"
+		$g_aLanguageIcons[4]  = $g_sThemesDir & "Resources\Icons\Flags\cs.ico"
+		$g_aLanguageIcons[5]  = $g_sThemesDir & "Resources\Icons\Flags\da.ico"
+		$g_aLanguageIcons[6]  = $g_sThemesDir & "Resources\Icons\Flags\de.ico"
+		$g_aLanguageIcons[7]  = $g_sThemesDir & "Resources\Icons\Flags\el.ico"
+		$g_aLanguageIcons[8]  = $g_sThemesDir & "Resources\Icons\Flags\es.ico"
+		$g_aLanguageIcons[9]  = $g_sThemesDir & "Resources\Icons\Flags\fr.ico"
+		$g_aLanguageIcons[10] = $g_sThemesDir & "Resources\Icons\Flags\hi.ico"
+		$g_aLanguageIcons[11] = $g_sThemesDir & "Resources\Icons\Flags\hr.ico"
+		$g_aLanguageIcons[12] = $g_sThemesDir & "Resources\Icons\Flags\hu.ico"
+		$g_aLanguageIcons[13] = $g_sThemesDir & "Resources\Icons\Flags\id.ico"
+		$g_aLanguageIcons[14] = $g_sThemesDir & "Resources\Icons\Flags\ir.ico"
+		$g_aLanguageIcons[15] = $g_sThemesDir & "Resources\Icons\Flags\is.ico"
+		$g_aLanguageIcons[16] = $g_sThemesDir & "Resources\Icons\Flags\it.ico"
+		$g_aLanguageIcons[17] = $g_sThemesDir & "Resources\Icons\Flags\iw.ico"
+		$g_aLanguageIcons[18] = $g_sThemesDir & "Resources\Icons\Flags\ja.ico"
+		$g_aLanguageIcons[19] = $g_sThemesDir & "Resources\Icons\Flags\ko.ico"
+		$g_aLanguageIcons[20] = $g_sThemesDir & "Resources\Icons\Flags\nl.ico"
+		$g_aLanguageIcons[21] = $g_sThemesDir & "Resources\Icons\Flags\no.ico"
+		$g_aLanguageIcons[22] = $g_sThemesDir & "Resources\Icons\Flags\pl.ico"
+		$g_aLanguageIcons[23] = $g_sThemesDir & "Resources\Icons\Flags\pt.ico"
+		$g_aLanguageIcons[24] = $g_sThemesDir & "Resources\Icons\Flags\pt-BR.ico"
+		$g_aLanguageIcons[25] = $g_sThemesDir & "Resources\Icons\Flags\ro.ico"
+		$g_aLanguageIcons[26] = $g_sThemesDir & "Resources\Icons\Flags\ru.ico"
+		$g_aLanguageIcons[27] = $g_sThemesDir & "Resources\Icons\Flags\sl.ico"
+		$g_aLanguageIcons[28] = $g_sThemesDir & "Resources\Icons\Flags\sk.ico"
+		$g_aLanguageIcons[29] = $g_sThemesDir & "Resources\Icons\Flags\sv.ico"
+		$g_aLanguageIcons[30] = $g_sThemesDir & "Resources\Icons\Flags\th.ico"
+		$g_aLanguageIcons[31] = $g_sThemesDir & "Resources\Icons\Flags\tr.ico"
+		$g_aLanguageIcons[32] = $g_sThemesDir & "Resources\Icons\Flags\vi.ico"
+		$g_aLanguageIcons[33] = $g_sThemesDir & "Resources\Icons\Flags\zh-CN.ico"
+		$g_aLanguageIcons[34] = $g_sThemesDir & "Resources\Icons\Flags\zh-TW.ico"
 
-		$g_aMenuIcons[0] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\Gear.ico"
-		$g_aMenuIcons[1] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\Logbook.ico"
-		$g_aMenuIcons[2] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\Close.ico"
-		$g_aMenuIcons[3] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\Update.ico"
-		$g_aMenuIcons[4] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\Home.ico"
-		$g_aMenuIcons[5] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\Support.ico"
-		$g_aMenuIcons[6] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\GitHub.ico"
-		$g_aMenuIcons[7] = $g_sThemesDir & "..\..\..\SDK\Resources\Icons\Menus\About.ico"
+		$g_aMenuIcons[0] = $g_sThemesDir & "Resources\Icons\Menus\Gear.ico"
+		$g_aMenuIcons[1] = $g_sThemesDir & "Resources\Icons\Menus\Logbook.ico"
+		$g_aMenuIcons[2] = $g_sThemesDir & "Resources\Icons\Menus\Close.ico"
+		$g_aMenuIcons[3] = $g_sThemesDir & "Resources\Icons\Menus\Update.ico"
+		$g_aMenuIcons[4] = $g_sThemesDir & "Resources\Icons\Menus\Home.ico"
+		$g_aMenuIcons[5] = $g_sThemesDir & "Resources\Icons\Menus\Support.ico"
+		$g_aMenuIcons[6] = $g_sThemesDir & "Resources\Icons\Menus\GitHub.ico"
+		$g_aMenuIcons[7] = $g_sThemesDir & "Resources\Icons\Menus\About.ico"
 
-		$g_sDlgOptionsIcon = $g_sThemesDir & "\..\..\..\SDK\ResourcesIcons\Dialogs\Gear.ico"
+		$g_sDlgOptionsIcon = $g_sThemesDir & "\Resources\Icons\Dialogs\Gear.ico"
 
 	EndIf
 
@@ -939,7 +942,7 @@ Func _LoadConfiguration()
 	$g_iMaxSysMemoryPerc = Int(IniRead($g_sPathIni, $g_sProgShortName, "MinSysMemoryPerc", 80))
 	$g_sDonateName = IniRead($g_sPathIni, "Donate", "DonateName", "Unknown")
 	$g_iDonateBuild = Number(IniRead($g_sPathIni, "Donate", "DonateBuild", 13))
-	$g_sBrowserPath = IniRead($g_sPathIni, $g_sProgShortName, "BrowserPath", @ProgramFilesDir & "\Mozilla Firefox\firefox.exe")
+	$g_sBrowserPath = IniRead($g_sPathIni, $g_sProgShortName, "BrowserPath", $g_sBrowserPath)
 	$g_iBoostEnabled = Int(IniRead($g_sPathIni, $g_sProgShortName, "BoostEnabled", 1))
 	$g_iBoostMill = Int(IniRead($g_sPathIni, $g_sProgShortName, "Boost", 500))
 	$g_iLimitEnabled = Int(IniRead($g_sPathIni, $g_sProgShortName, "LimitEnabled", 1))
@@ -1221,7 +1224,7 @@ Func _LoadBrowser($sBrowserPath)
 
 	If FileExists($sBrowserPath) Then
 
-		$g_sBrowserPath = $sBrowserPath
+		; $g_sBrowserPath = @ProgramFilesDir & "\Waterfox\waterfox.exe
 		$g_sCoreProcess = _WinAPI_PathStripPath($g_sBrowserPath)
 		$g_sBrowserName = FileGetVersion($g_sBrowserPath, $FV_PRODUCTNAME)
 
@@ -1235,7 +1238,7 @@ Func _LoadBrowser($sBrowserPath)
 	Else
 
 		_WinAPI_DestroyIcon(_SendMessage($g_hIconProfile, $STM_SETIMAGE, 1, _WinAPI_ShellExtractIcon($g_aCoreIcons[0], 0, 48, 48)))
-		$sBrowserPath = @ProgramFilesDir & "\Mozilla Firefox\firefox.exe"
+		; $sBrowserPath = @ProgramFilesDir & "\Waterfox\waterfox.exe
 		;IniWrite($g_ReBarPathIni, $g_ReBarShortName, "BrowserPath", $sBrowserPath)
 
 	EndIf

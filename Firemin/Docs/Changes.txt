@@ -3,13 +3,21 @@ RIZONESOFT FIREMIN CHANGES
 ==================================================
 
 --------------------------------------------------
+Version 11.8.3.8516 (NOVEMBER 30, 2024)
+--------------------------------------------------
+
+- Fixed: An issue where settings were not being saved correctly.
+- Fixed: The 'Decline' option was missing on the installation promo screen.
+- Enhanced: Streamlined the About pages by removing unnecessary content.
+- Improved: Made minor code enhancements for better performance and stability.
+
+--------------------------------------------------
 Version 11.8.3.8509 (NOVEMBER 20, 2024)
 --------------------------------------------------
 
 - Optimized language loading system with caching mechanism
 - Improved string replacement efficiency in localization
 - Code refactoring and performance improvements
-
 
 --------------------------------------------------
 Version 11.8.3.8398 (OCTOBER 30, 2023)

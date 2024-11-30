@@ -189,10 +189,10 @@ Func _About_ShowDialog()
 	$abBtnOK = GUICtrlCreateButton($g_aLangAbout[14], 260, 450, 150, 38, $BS_DEFPUSHBUTTON)
 	GUICtrlSetFont($abBtnOK, 9)
 
-	$g_aAboutIcons[2][0] = GUICtrlCreateIcon($g_aAboutIcons[3][1], $g_iAboutIconStart + 4, 20, 455, 32, 32)
+	$g_aAboutIcons[2][0] = GUICtrlCreateIcon($g_aAboutIcons[2][1], $g_iAboutIconStart + 4, 20, 455, 32, 32)
 	GUICtrlSetTip($g_aAboutIcons[2][0], $g_aLangAbout[12])
 	GUICtrlSetCursor($g_aAboutIcons[2][0], 0)
-	$g_aAboutIcons[3][0] = GUICtrlCreateIcon($g_aAboutIcons[6][1], $g_iAboutIconStart + 6, 60, 455, 32, 32)
+	$g_aAboutIcons[3][0] = GUICtrlCreateIcon($g_aAboutIcons[3][1], $g_iAboutIconStart + 6, 60, 455, 32, 32)
 	GUICtrlSetTip($g_aAboutIcons[3][0], $g_aLangAbout[13])
 	GUICtrlSetCursor($g_aAboutIcons[3][0], 0)
 
@@ -320,18 +320,18 @@ Func __About_SetResources()
 
 	Else
 
-		$g_sDlgAboutIcon = $g_sThemesDir & "\Icons\Dialogs\Information.ico"
-		$g_aAboutProgIcons[0] = $g_sThemesDir & "\Icons\" & $g_sProgShortName & ".ico"
-		$g_aAboutProgIcons[1] = $g_sThemesDir & "\Icons\" & $g_sProgShortName & "H.ico"
+		$g_sDlgAboutIcon = $g_sThemesDir & "Resources\Icons\Dialogs\Information.ico"
+		$g_aAboutProgIcons[0] = $g_sThemesDir & "Resources\Icons\" & $g_sProgShortName & ".ico"
+		$g_aAboutProgIcons[1] = $g_sThemesDir & "Resources\Icons\" & $g_sProgShortName & "H.ico"
 
-		$g_aAboutIcons[0][1] = $g_sThemesDir & "\Icons\About\PayPal.ico"
-		$g_aAboutIcons[0][2] = $g_sThemesDir & "\Icons\About\PayPalH.ico"
-		$g_aAboutIcons[1][1] = $g_sThemesDir & "\Icons\About\sa.ico"
-		$g_aAboutIcons[1][2] = $g_sThemesDir & "\Icons\About\saH.ico"
-		$g_aAboutIcons[2][1] = $g_sThemesDir & "\Icons\About\Facebook.ico"
-		$g_aAboutIcons[2][2] = $g_sThemesDir & "\Icons\About\FacebookH.ico"
-		$g_aAboutIcons[5][1] = $g_sThemesDir & "\Icons\About\GitHub.ico"
-		$g_aAboutIcons[5][2] = $g_sThemesDir & "\Icons\About\GitHubH.ico"
+		$g_aAboutIcons[0][1] = $g_sThemesDir & "Resources\Icons\About\PayPal.ico"
+		$g_aAboutIcons[0][2] = $g_sThemesDir & "Resources\Icons\About\PayPalH.ico"
+		$g_aAboutIcons[1][1] = $g_sThemesDir & "Resources\Icons\About\sa.ico"
+		$g_aAboutIcons[1][2] = $g_sThemesDir & "Resources\Icons\About\saH.ico"
+		$g_aAboutIcons[2][1] = $g_sThemesDir & "Resources\Icons\About\Facebook.ico"
+		$g_aAboutIcons[2][2] = $g_sThemesDir & "Resources\Icons\About\FacebookH.ico"
+		$g_aAboutIcons[3][1] = $g_sThemesDir & "Resources\Icons\About\GitHub.ico"
+		$g_aAboutIcons[3][2] = $g_sThemesDir & "Resources\Icons\About\GitHubH.ico"
 
 	EndIf
 

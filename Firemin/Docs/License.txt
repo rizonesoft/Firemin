@@ -4,7 +4,7 @@ Section 1: License Agreement
 
 Firemin
 
-Copyright © 2024 Rizonetech (Pty) Ltd. (https://www.rizonetech.com)
+Copyright © 2024 Rizonetech (Pty) Ltd. (https://rizonetech.com)
 
 Rizonesoft is a trading name of Rizonetech (Pty) Ltd.
 
