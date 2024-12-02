@@ -874,7 +874,7 @@ Func _SetResources()
 		$g_aMenuIcons[6] = $g_sThemesDir & "Resources\Icons\Menus\GitHub.ico"
 		$g_aMenuIcons[7] = $g_sThemesDir & "Resources\Icons\Menus\About.ico"
 
-		$g_sDlgOptionsIcon = $g_sThemesDir & "\Resources\Icons\Dialogs\Gear.ico"
+		$g_sDlgOptionsIcon = $g_sThemesDir & "Resources\Icons\Dialogs\Gear.ico"
 
 	EndIf
 
