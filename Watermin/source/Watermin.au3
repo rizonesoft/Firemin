@@ -31,7 +31,7 @@
 ;===============================================================================================================
 #AutoIt3Wrapper_Res_Comment=Watermin									;~ Comment field
 #AutoIt3Wrapper_Res_Description=Watermin						      	;~ Description field
-#AutoIt3Wrapper_Res_Fileversion=11.8.3.8525
+#AutoIt3Wrapper_Res_Fileversion=11.8.3.8535
 #AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
 #AutoIt3Wrapper_Res_FileVersion_First_Increment=Y					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
 #AutoIt3Wrapper_Res_HiDpi=N                      					;~ (Y/N) Compile for high DPI. Default=N
@@ -718,6 +718,7 @@ Func _StartCoreGui()
 	GUICtrlSetOnEvent($g_hBtnCancel, "_CloseCoreGui")
 	GUICtrlSetOnEvent($g_hBtnSave, "_SaveWaterminConfig")
 
+	;_LoadConfiguration()
 	_LoadBrowser($g_sBrowserPath)
 	_SetControlStates()
 
@@ -1222,9 +1223,11 @@ EndFunc
 
 Func _LoadBrowser($sBrowserPath)
 
+	; MsgBox(0, "", $g_sBrowserPath)
+
 	If FileExists($sBrowserPath) Then
 
-		; $g_sBrowserPath = @ProgramFilesDir & "\Waterfox\waterfox.exe
+		;~ $g_sBrowserPath = @ProgramFilesDir & "\Waterfox\waterfox.exe"
 		$g_sCoreProcess = _WinAPI_PathStripPath($g_sBrowserPath)
 		$g_sBrowserName = FileGetVersion($g_sBrowserPath, $FV_PRODUCTNAME)
 
@@ -1238,8 +1241,8 @@ Func _LoadBrowser($sBrowserPath)
 	Else
 
 		_WinAPI_DestroyIcon(_SendMessage($g_hIconProfile, $STM_SETIMAGE, 1, _WinAPI_ShellExtractIcon($g_aCoreIcons[0], 0, 48, 48)))
-		; $sBrowserPath = @ProgramFilesDir & "\Waterfox\waterfox.exe
-		;IniWrite($g_ReBarPathIni, $g_ReBarShortName, "BrowserPath", $sBrowserPath)
+		;~ $sBrowserPath = @ProgramFilesDir & "\Waterfox\waterfox.exe
+		;~ IniWrite($g_ReBarPathIni, $g_ReBarShortName, "BrowserPath", $sBrowserPath)
 
 	EndIf
 
