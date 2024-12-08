@@ -1,12 +1,12 @@
 ==================================================
 FIREMIN
 © RIZONESOFT. All rights reserved
-https://www.rizonesoft.com
+https://rizonesoft.com
 ==================================================
-Version: 11.8.3.8516
-Release Date: 30 NOVEMBER, 2024
+Version: 11.8.3.8520
+Release Date: 5 DECEMBER, 2024
 System Requirements: 7, 8, 8.1, 10, 11
-Disk Space: 0 MB
+Disk Space: 5.6 MB
 ==================================================
 
 Description

@@ -1,3 +1,3 @@
 [Update]
-LatestBuild=8516
+LatestBuild=8520
 UpdateURL=https://rizonesoft.com/downloads/firemin/

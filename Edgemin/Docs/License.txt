@@ -2,21 +2,21 @@
 Section 1: License Agreement
 =============================================
 
-Firemin
+Edgemin
 
 Copyright © 2024 Rizonetech (Pty) Ltd. (https://rizonetech.com)
 
 Rizonesoft is a trading name of Rizonetech (Pty) Ltd.
 
-Firemin is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+Edgemin is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 
-Firemin is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You can view the full text of the license at https://www.gnu.org/licenses/.
+Edgemin is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You can view the full text of the license at https://www.gnu.org/licenses/.
 
 =============================================
 Section 2: Privacy Policy
 =============================================
 
-Your privacy is important to us. This page describes the privacy policy applicable to the Firemin software product ("the Software") and this installer.
+Your privacy is important to us. This page describes the privacy policy applicable to the Edgemin software product ("the Software") and this installer.
 
 Data Processing in the Software: For the processing of personal data, we, as data controllers, adhere to the General Data Protection Regulation (GDPR) of the European Union and the Protection of Personal Information Act (POPI Act) of South Africa. To that effect, the users of our website and our Software are the data subjects.
 
